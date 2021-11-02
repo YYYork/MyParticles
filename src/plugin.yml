@@ -1,0 +1,8 @@
+name: MyParticles
+main: io.github.yyyork.MyParticles
+version: 1.0
+api-version: 1.16
+commands:
+  mp:
+    usage: "/mp"
+    description: "play it!"
