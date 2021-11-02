@@ -33,10 +33,13 @@ public class CommandHandler implements CommandExecutor {
         	
         	forspawn = new BukkitRunnable() {
 				@Override
-				public void run() {
+				public void run() {//任务代码写在这里面
 					new SpawnParticles(player.getLocation());
 				}
-			}.runTaskTimer(MyParticles.instance, 0, 20);//20刻=1s
+			}.runTaskTimer(MyParticles.instance, 0, 20);
+			// Bukkit提供的方法——runTaskTimer（循环执行一个任务）
+			// instance是插件主类实例，0为多久后开始循环，这里表示直接开始，20表示每20刻执行一次代码
+			// 20刻=1s
 			return true;
         }
         return true;
