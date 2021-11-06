@@ -26,7 +26,7 @@ public class MagicCircle {
 	}
 	
 	public MagicCircle setR(double r) {
-		this.r = t;
+		this.r = r;
 		return this;
 	}
 	

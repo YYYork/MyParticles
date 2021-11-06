@@ -13,17 +13,17 @@ public class CommandHandler implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if(!(commandSender instanceof Player)){
-            commandSender.sendMessage("Â§8[Â§6æˆ‘çš„ç²’å­Â§8]Â§4è¯¥æŒ‡ä»¤åªèƒ½åœ¨æ¸¸æˆå†…ä½¿ç”¨");
+            commandSender.sendMessage("¡ì8[¡ì6ÎÒµÄÁ£×Ó¡ì8]¡ì4¸ÃÖ¸ÁîÖ»ÄÜÔÚÓÎÏ·ÄÚÊ¹ÓÃ");
             return true;
         }
         Player player = (Player)commandSender;
         if(args[0].equals("cancel")) {
         	if(forspawn==null) {
-        		player.sendMessage("Â§8[Â§6æˆ‘çš„ç²’å­Â§8]Â§4æ‚¨æœªæ›¾å¼€å§‹è¿‡ç²’å­æ’­æ”¾");
+        		player.sendMessage("¡ì8[¡ì6ÎÒµÄÁ£×Ó¡ì8]¡ì4ÄúÎ´Ôø¿ªÊ¼¹ıÁ£×Ó²¥·Å");
         		return true;
         	}else {
         		forspawn.cancel();
-        		player.sendMessage("Â§8[Â§6æˆ‘çš„ç²’å­Â§8]Â§aç²’å­æ’­æ”¾å·²ç»å…³é—­");
+        		player.sendMessage("¡ì8[¡ì6ÎÒµÄÁ£×Ó¡ì8]¡ìaÁ£×Ó²¥·ÅÒÑ¾­¹Ø±Õ");
         		return true;
         	}
         }
@@ -33,13 +33,13 @@ public class CommandHandler implements CommandExecutor {
         	
         	forspawn = new BukkitRunnable() {
 				@Override
-				public void run() {//ä»»åŠ¡ä»£ç å†™åœ¨è¿™é‡Œé¢
+				public void run() {//ÈÎÎñ´úÂëĞ´ÔÚÕâÀïÃæ
 					new SpawnParticles(player.getLocation());
 				}
 			}.runTaskTimer(MyParticles.instance, 0, 20);
-			// Bukkitæä¾›çš„æ–¹æ³•â€”â€”runTaskTimerï¼ˆå¾ªç¯æ‰§è¡Œä¸€ä¸ªä»»åŠ¡ï¼‰
-			// instanceæ˜¯æ’ä»¶ä¸»ç±»å®ä¾‹ï¼Œ0ä¸ºå¤šä¹…åå¼€å§‹å¾ªç¯ï¼Œè¿™é‡Œè¡¨ç¤ºç›´æ¥å¼€å§‹ï¼Œ20è¡¨ç¤ºæ¯20åˆ»æ‰§è¡Œä¸€æ¬¡ä»£ç 
-			// 20åˆ»=1s
+			// BukkitÌá¹©µÄ·½·¨¡ª¡ªrunTaskTimer£¨Ñ­»·Ö´ĞĞÒ»¸öÈÎÎñ£©
+			// instanceÊÇ²å¼şÖ÷ÀàÊµÀı£¬0Îª¶à¾Ãºó¿ªÊ¼Ñ­»·£¬ÕâÀï±íÊ¾Ö±½Ó¿ªÊ¼£¬20±íÊ¾Ã¿20¿ÌÖ´ĞĞÒ»´Î´úÂë
+			// 20¿Ì=1s
 			return true;
         }
         return true;
