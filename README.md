@@ -1,2 +1,3 @@
 # MyParticles
-信息社上课代码展示
+我的特效 XD  
+![effect1](effect1.png)
