@@ -2,4 +2,4 @@
 
 魔法阵的真正实现
 
-[MagicCircle.png](img)
+[MagicCircle.png]
